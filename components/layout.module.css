@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+}
+.col1 {
+  min-width: 15%;
+}
+.loading {
+  text-align: center;
+  color: #ffffff;
+}
+.col2 {
+  padding: 0px 20px;
+  width: 85%;
+  color: white;
+}
+.invalid {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.invalid button {
+  width: 100px;
+  height: 40px;
+}

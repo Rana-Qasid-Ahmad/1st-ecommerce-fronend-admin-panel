@@ -1,0 +1,97 @@
+.sidebar {
+  flex-basis: 200px;
+  min-width: 200px;
+  flex-shrink: 0;
+  background-color: var(--sidebar);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebarheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+.sidebarlist {
+  list-style-type: none;
+  padding: 0;
+}
+.sidebarlistitem {
+  position: relative;
+  margin-bottom: 4px;
+}
+.sidebarlistitem a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 16px;
+  color: var(--sidebar-link);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+}
+.sidebarlistitem svg {
+  margin-right: 8px;
+}
+.sidebarlistitem:hover {
+  background-color: var(--sidebar-hover-link);
+}
+.sidebarlistitem.active {
+  background-color: var(--sidebar-active-link);
+}
+.sidebarlistitem.active:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  background-color: var(--action-color);
+  height: 100%;
+  width: 4px;
+}
+@media screen and (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+}
+.appicon {
+  color: var(--sidebar-main-color);
+}
+.appicon svg {
+  width: 24px;
+  height: 24px;
+}
+.accountinfo {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin-top: auto;
+}
+.accountinfopicture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.accountinfopicture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.accountinfoname {
+  font-size: 14px;
+  color: var(--sidebar-main-color);
+  margin: 0 8px;
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.accountinfomore {
+  color: var(--sidebar-main-color);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+}

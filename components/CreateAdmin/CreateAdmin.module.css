@@ -1,0 +1,41 @@
+.mainDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.innerDiv {
+  margin-top: 100px;
+  width: 90%;
+}
+.innerDiv form {
+  display: flex;
+  justify-content: space-between;
+}
+.formCol1,
+.formCol2 {
+  display: flex;
+  flex-direction: column;
+}
+.formCol1 label,
+.formCol2 label {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.innerDiv form input {
+  height: 45px;
+}
+.innerDiv form input,
+.innerDiv form textarea {
+  box-shadow: inset -1px -1px 20px 1px #94afe3;
+  background-color: #dddfe4;
+  border: none;
+  border-radius: 5px;
+}
+.formCol1 input,
+.formCol1 textarea {
+  width: 50vw;
+}
+.formCol2 button {
+  height: 45px;
+  margin-top: 43px;
+}
