@@ -13,17 +13,25 @@ function Layout({ children, api }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    async function fetch() {
-      const res = await axios.get(`${api}/user`, {
-        headers: {
-          'Authorization': localStorage.getItem('JWT_TOKEN'), // Add your authorization token here
-          'Content-Type': 'application/json', // Set Content-Type according to your data format
-        }
-      })
-      setUserAuth(res.data);
-      setLoading(false)
+    const jwt = localStorage.getItem('JWT_TOKEN');
+    console.log(jwt)
+    if (jwt !== null) {
+      async function fetch() {
+        const res = await axios.get(`${api}/user`, {
+          headers: {
+            'Authorization': localStorage.getItem('JWT_TOKEN'), // Add your authorization token here
+            'Content-Type': 'application/json', // Set Content-Type according to your data format
+          }
+        })
+        setUserAuth(res.data);
+        setLoading(false)
+      }
+      fetch();
+      console.log("first")
+    }else{
+      setLoading(false);
     }
-    fetch();
+    
   }, [])
   const user = userAuth.role;
   return (
@@ -44,7 +52,7 @@ function Layout({ children, api }) {
           <>
             <div className={`${styles.invalid}`}>
               <h1 className={styles.loading}>Invalid</h1>
-              <button onClick={() => {router.push('/login') }}>Login</button>
+              <button onClick={() => { router.push('/login') }}>Login</button>
             </div></>
         }</>}
 

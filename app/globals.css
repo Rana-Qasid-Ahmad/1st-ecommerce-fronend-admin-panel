@@ -2,7 +2,7 @@
   box-sizing: border-box;
   color: var(--app-content-main-color);
 }
-button{
+button {
   border: none;
   border-radius: 20px;
   box-shadow: inset 0px 0px 3px 0px #000000e2;
@@ -14,14 +14,21 @@ a {
   text-decoration: none; /* Remove underline */
 }
 input {
+  color: var(--app-bg);
   border: none;
   box-shadow: inset 0px 0px 8px 2px #00118fe2;
   padding: 0px 10px;
 }
 textarea {
+  color: var(--app-bg);
+
   border: none;
   box-shadow: inset 0px 0px 8px 2px #00118fe2;
   padding: 10px 10px;
+}
+.loggout {
+  text-align: center;
+  margin: 100px 0px;
 }
 :root {
   --app-bg: #101827;
