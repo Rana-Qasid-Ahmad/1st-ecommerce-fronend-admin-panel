@@ -15,16 +15,12 @@
 .innerDiv form input {
   margin-bottom: 20px;
   height: 40px;
-  box-shadow: 2px 5px 6px 0px #ebebeb;
-
   font-size: 15px;
-  background-color: rgba(222, 217, 217, 0.091);
-  border: 1px solid rgb(192, 192, 192);
   border-radius: 3px;
 }
 .innerDiv form button {
-  background-color: black;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 10, 126);
   border: none;
   border-radius: 20px;
   margin-top: 30px;
