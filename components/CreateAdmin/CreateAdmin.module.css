@@ -37,5 +37,7 @@
 }
 .formCol2 button {
   height: 45px;
+  width: 90px;
+  color: var(--app-bg);
   margin-top: 43px;
 }

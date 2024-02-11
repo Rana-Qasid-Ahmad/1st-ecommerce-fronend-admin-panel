@@ -1,26 +1,27 @@
 * {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
   color: var(--app-content-main-color);
 }
-button {
+/* button {
   border: none;
   border-radius: 20px;
   box-shadow: inset 0px 0px 3px 0px #000000e2;
   background-color: white !important;
   color: var(--action-color) !important;
-}
+} */
 a {
   color: inherit; /* Inherit the color from the parent */
   text-decoration: none; /* Remove underline */
 }
 input {
-  color: var(--app-bg);
+  color: var(--app-bg) !important;
   border: none;
   box-shadow: inset 0px 0px 8px 2px #00118fe2;
   padding: 0px 10px;
 }
 textarea {
-  color: var(--app-bg);
+  color: var(--app-bg) !important;
 
   border: none;
   box-shadow: inset 0px 0px 8px 2px #00118fe2;

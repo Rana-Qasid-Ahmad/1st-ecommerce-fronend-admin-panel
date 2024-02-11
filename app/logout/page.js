@@ -1,25 +1,23 @@
 "use client"
-import Layout from '@/components/Layout'
-import { useRouter } from 'next/navigation'
-import PropTypes from 'prop-types'
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
-function page(props) {
-  const router = useRouter()
+export default function Page() {
   useEffect(() => {
+    // This function will run when the component mounts
+    // It removes three items from the localStorage: JWT_TOKEN, User_Email, and User_Name
     localStorage.removeItem("JWT_TOKEN");
     localStorage.removeItem("User_Email");
     localStorage.removeItem("User_Name");
+
+    // After removing the items, it sets a timeout function to redirect the user to the login page
+    // Redirect after 2000 milliseconds (2 seconds)
     setTimeout(() => {
-      router.push('/login')
+      window.location.href = '/login'; // Redirecting to the login page
     }, 2000);
-  }, [])
+
+  }, []); // The empty dependency array [] means this effect will only run once after the component mounts
 
   return (
-    <><h1 className='loggout'>Logged Out</h1></>
-  )
+    <><h1 className='loggout'>Logged Out <br /> Redirecting to Login Page</h1></>
+  );
 }
-
-page.propTypes = {}
-
-export default page

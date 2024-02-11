@@ -37,8 +37,10 @@
 }
 .formCol2 button {
   height: 45px;
+  color: var(--app-bg);
   margin-top: 43px;
 }
 .hidden{
   display: none;
 }
+
