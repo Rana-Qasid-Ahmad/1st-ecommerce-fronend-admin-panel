@@ -20,6 +20,7 @@
   align-items: center;
 }
 .invalid button {
+  color: var(--app-bg);
   width: 100px;
   height: 40px;
 }
